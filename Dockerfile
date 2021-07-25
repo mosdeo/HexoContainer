@@ -16,5 +16,9 @@ RUN hexo init /app/blog
 # create data volume
 VOLUME /app/blog
 
+# 設定掛載 ssh key 的位置
+RUN mkdir /root/.ssh
+VOLUME /root/.ssh
+
 # hexo default port
 EXPOSE 4001
