@@ -1,1 +1,1 @@
-docker build . -t mosdeo/hexo
+docker build . -t mosdeo_hexo
