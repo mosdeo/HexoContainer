@@ -3,12 +3,12 @@ docker run \
     -i --rm\
     --name mosdeo_hexo -p 4001:4000 \
     -v /Users/lky/mosdeo_github_io/:/app/blog \
+    -v /Users/lky/code_repos/Stories/_posts:/app/blog/source/_posts \
+    -v /Users/lky/code_repos/Stories/content:/app/blog/source/content \
     -v /Users/lky/.ssh:/root/.ssh \
     mosdeo/hexo /bin/bash << EOF
-    # hexo -v
-    # rm -rf .deploy_git
     cd /app/blog
-    hexo g
+    hexo clean && hexo g
     git config --global user.email "mosdeo@gmail.com"
     git config --global user.name "Lin, Kao-Yuan"
     echo "yes" | hexo d
