@@ -7,7 +7,6 @@ docker run \
     -v /Users/lky/code_repos/Stories/content:/app/blog/source/content \
     mosdeo_hexo /bin/bash << EOF
     cd /app/blog
-    hexo clean
     hexo g
     hexo s
 EOF
