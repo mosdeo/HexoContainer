@@ -4,5 +4,7 @@ docker run -i --rm --name mosdeo_hexo -p 4001:4000 -v /Users/lky/mosdeo_github_i
     # rm -rf .deploy_git
     cd /app/blog
     hexo g
+    git config --global user.email "mosdeo@gmail.com"
+    git config --global user.name "Lin, Kao-Yuan"
     hexo d
 EOF
