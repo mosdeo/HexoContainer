@@ -1,4 +1,4 @@
-docker rm hexo_gen_depoly -f
+# docker rm hexo_gen_depoly -f
 docker run \
     -i --rm\
     --name hexo_gen_depoly -p 4001:4000 \

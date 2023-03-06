@@ -1,4 +1,4 @@
-docker rm hexo_gen_server -f
+# docker rm hexo_gen_server -f
 docker run \
     -i --rm\
     --name hexo_gen_server -p 4001:4000 \
