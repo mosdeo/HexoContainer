@@ -1,0 +1,16 @@
+version: '3'
+services:
+  hexo_gen_deploy:
+    image: mosdeo_hexo
+    container_name: hexo_gen_depoly
+    ports:
+      - "4001:4000"
+    volumes:
+      - /Users/lky/mosdeo_github_io/:/app/blog
+      - /Users/lky/code_repos/Stories/_posts:/app/blog/source/_posts
+      - /Users/lky/code_repos/Stories/content:/app/blog/source/content
+    command: |
+      /bin/bash -c "
+      cd /app/blog
+      hexo g && hexo s
+      "

@@ -8,15 +8,20 @@
 
 - 產生安裝好 npm 與 hexo 的 docker 映像
 
-### hexo_gs.sh
+### hexo g && hexo s
 
-- hexo g && hexo s
 - 本地測試、預覽效果用
+- 方法1: ```$bash hexo_gs.sh```
+- 方法2: ```$docker compose -f docker-compose-gs.yml up```
 
-### hexo_gd.sh
+最後顯示「Hexo is running at http://localhost:4000」是指 docker 內部的 4000 port，不是宿主機的 4000 port。
 
-- hexo clean && hexo g && hexo d
+
+### hexo clean && hexo g && hexo d
+
 - 部署用
+- 方法1: ```$bash hexo_gd.sh```
+- 方法2: ```$docker compose -f docker-compose-gd.yml up```
 
 ## 路徑（掛載點）說明
 
